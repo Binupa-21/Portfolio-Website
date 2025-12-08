@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #050505; /* Deep black background */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scrollbar issues */
+}
+
+/* Custom Scrollbar for Chrome/Edge/Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9; /* Cyan on hover */
+}
