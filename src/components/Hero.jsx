@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
+import HeroImage from "../assets/hero.jpg";
+
 const Hero = () => {
   return (
     <div
@@ -71,17 +73,15 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="w-full md:w-1/2 mt-10 md:mt-0 relative flex justify-center"
         >
-          {/* Abstract Glow Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
 
-          {/* Image Placeholder Box */}
-          <div className="relative z-10 w-64 h-80 md:w-80 md:h-[400px] bg-gray-900 border border-gray-700 rounded-2xl flex items-center justify-center shadow-2xl shadow-primary/10">
-            <div className="text-center p-4">
-              <div className="text-6xl mb-4">👨‍💻</div>
-              <p className="text-gray-500 font-mono text-sm">
-                Insert Photo<br/>(src/assets)
-              </p>
-            </div>
+          {/* 👇 REAL PHOTO DISPLAY */}
+          <div className="relative z-10 w-64 h-80 md:w-80 md:h-[400px] rounded-2xl overflow-hidden border-2 border-gray-700 shadow-2xl shadow-primary/20">
+             <img 
+               src={HeroImage} 
+               alt="My Profile" 
+               className="w-full h-full object-cover hover:scale-105 duration-500" 
+             />
           </div>
         </motion.div>
       </div>

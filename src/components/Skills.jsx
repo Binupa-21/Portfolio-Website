@@ -4,16 +4,15 @@ import { SiTailwindcss, SiCplusplus } from "react-icons/si";
 
 const Skills = () => {
   const techs = [
+    { id: 9, src: <SiCplusplus size={50} />, title: "C++", style: "shadow-blue-600 text-blue-600" },
+    { id: 8, src: <FaJava size={50} />, title: "Java", style: "shadow-red-500 text-red-500" },
+    { id: 10, src: <FaGithub size={50} />, title: "GitHub", style: "shadow-gray-400 text-gray-400" },
     { id: 1, src: <FaHtml5 size={50} />, title: "HTML", style: "shadow-orange-500 text-orange-500" },
     { id: 2, src: <FaCss3Alt size={50} />, title: "CSS", style: "shadow-blue-500 text-blue-500" },
     { id: 3, src: <FaJs size={50} />, title: "JavaScript", style: "shadow-yellow-500 text-yellow-500" },
     { id: 4, src: <FaReact size={50} />, title: "React", style: "shadow-cyan-400 text-cyan-400" },
     { id: 5, src: <SiTailwindcss size={50} />, title: "Tailwind", style: "shadow-sky-400 text-sky-400" },
-    { id: 6, src: <FaNodeJs size={50} />, title: "Node JS", style: "shadow-green-500 text-green-500" },
     { id: 7, src: <FaPython size={50} />, title: "Python", style: "shadow-yellow-400 text-yellow-400" },
-    { id: 8, src: <FaJava size={50} />, title: "Java", style: "shadow-red-500 text-red-500" },
-    { id: 9, src: <SiCplusplus size={50} />, title: "C++", style: "shadow-blue-600 text-blue-600" },
-    { id: 10, src: <FaGithub size={50} />, title: "GitHub", style: "shadow-gray-400 text-gray-400" },
   ];
 
   return (
