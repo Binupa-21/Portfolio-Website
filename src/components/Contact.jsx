@@ -14,7 +14,7 @@ const Contact = () => {
           <form 
             action="https://formsubmit.co/binupanuransith@gmail.com" 
             method="POST" 
-            className="flex flex-col w-full md:w-1/2 bg-gray-900/50 p-6 rounded-xl border border-gray-800 shadow-lg"
+            className="flex flex-col w-full md:w-1/2 bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:-translate-y-2 transition-all duration-300"
           >
             <input 
               type="text" 

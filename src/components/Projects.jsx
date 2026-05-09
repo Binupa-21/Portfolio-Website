@@ -42,25 +42,26 @@ const Projects = () => {
           {projects.map(({ id, title, desc, tech, code, demo }) => (
             <div 
               key={id} 
-              className="shadow-md shadow-gray-600 rounded-lg p-6 border border-gray-700 bg-gray-900/50 backdrop-blur-sm hover:shadow-primary/50 hover:-translate-y-2 duration-300"
+              className="bg-slate-900/50 backdrop-blur-md rounded-lg p-6 border border-white/10 hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 flex flex-col"
             >
               {/* Card Header (Icon + Links) */}
               <div className="flex justify-between items-center mb-4">
                  <div className="text-4xl text-primary">📁</div>
                  <div className="flex gap-4">
-                    <a href={code} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><FaGithub size={22}/></a>
-                    <a href={demo} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors"><FaExternalLinkAlt size={20}/></a>
+                    <a href={code} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary hover:scale-110 transition-all duration-200"><FaGithub size={26}/></a>
+                    <a href={demo} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary hover:scale-110 transition-all duration-200"><FaExternalLinkAlt size={22}/></a>
                  </div>
               </div>
               
               {/* Content */}
-              <h3 className="text-xl font-bold mb-2 group-hover:text-primary duration-300">{title}</h3>
-              <p className="text-gray-400 text-sm mb-4 h-20 overflow-hidden">{desc}</p>
+              <h3 className="text-2xl font-extrabold mb-3 text-gray-100 group-hover:text-primary duration-300 tracking-tight">{title}</h3>
+              <p className="text-gray-400 text-sm mb-6 flex-grow">{desc}</p>
               
               {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-2 mt-auto">
                 {tech.map((t, index) => (
-                  <span key={index} className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">
+                  <span key={index} className="flex items-center gap-1.5 text-xs font-medium text-gray-300 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
                     {t}
                   </span>
                 ))}

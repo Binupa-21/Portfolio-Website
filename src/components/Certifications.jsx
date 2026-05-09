@@ -34,7 +34,7 @@ const Certifications = () => {
           {certifications.map(({ id, title, issuer, date, link, icon }) => (
             <div
               key={id}
-              className="relative shadow-lg shadow-black/40 rounded-xl p-6 bg-gray-900 border border-gray-800 hover:border-gray-700 hover:shadow-secondary/20 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden"
+              className="relative bg-slate-900/50 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-primary/50 hover:-translate-y-2 transition-all duration-300 flex flex-col group overflow-hidden"
             >
               {/* Glowing background behind logo */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FF9900]/5 rounded-full blur-3xl group-hover:bg-[#FF9900]/10 transition-colors duration-500"></div>

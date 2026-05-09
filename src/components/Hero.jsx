@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-900 text-white pt-20"
+      className="h-screen w-full bg-transparent text-white pt-20"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         
@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-7xl font-bold text-white"
           >
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Binupa Ariyarathna</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary tracking-tighter font-black">Binupa Ariyarathna</span>
           </motion.h2>
 
           {/* Subtext Animation */}
@@ -51,7 +51,7 @@ const Hero = () => {
               to="projects"
               smooth
               duration={500}
-              className="group text-black font-bold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-primary to-cyan-400 cursor-pointer hover:scale-105 duration-300 shadow-lg shadow-primary/30"
+              className="group relative overflow-hidden text-black font-bold w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-primary to-cyan-400 cursor-pointer hover:scale-105 duration-300 shadow-lg shadow-primary/30 before:absolute before:inset-0 before:-translate-x-full hover:before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/50 before:to-transparent"
             >
               View My Work
             </Link>
@@ -76,11 +76,11 @@ const Hero = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
 
           {/* 👇 REAL PHOTO DISPLAY */}
-          <div className="relative z-10 w-64 h-80 md:w-80 md:h-[400px] rounded-2xl overflow-hidden border-2 border-gray-700 shadow-2xl shadow-primary/20">
+          <div className="relative z-10 w-64 h-80 md:w-80 md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(6,182,212,0.6)]">
              <img 
                src={HeroImage} 
                alt="My Profile" 
-               className="w-full h-full object-cover hover:scale-105 duration-500" 
+               className="w-full h-full object-cover hover:scale-105 duration-500 rounded-2xl" 
              />
           </div>
         </motion.div>
