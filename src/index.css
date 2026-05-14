@@ -13,17 +13,17 @@ body {
 
 /* Custom Scrollbar for Chrome/Edge/Safari */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 5px;
+  background: #262626;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9; /* Cyan on hover */
+  background: #FF6B00; /* Bright Orange on hover */
 }
 
 @layer utilities {

@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0ea5e9", // The Cyan color
-        secondary: "#a855f7", // The Purple color
-        dark: "#0f172a", // Very dark blue/slate for background
+        primary: "#FF6B00", // The Bright Orange accent color
+        secondary: "#ff8533", // Lighter orange secondary accent
+        dark: "#0a0a0a", // Deep black background matching Figma design
       },
       animation: {
         blob: "blob 7s infinite",

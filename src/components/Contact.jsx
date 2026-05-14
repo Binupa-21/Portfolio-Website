@@ -2,51 +2,57 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-900 p-4 text-white">
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+    <div name="contact" className="w-full min-h-screen bg-[#0a0a0a] p-6 text-white flex items-center border-t border-white/5">
+      <div className="flex flex-col justify-center max-w-screen-xl mx-auto w-full py-12">
         
         <div className="pb-8 text-center">
-          <p className="text-4xl font-bold inline border-b-4 border-secondary">Get In Touch</p>
-          <p className="py-6 text-gray-400">// 04. Submit the form below to say hi</p>
+          <p className="text-sm text-gray-400 tracking-widest uppercase font-mono">// Start a conversation</p>
+          <h2 className="text-4xl font-extrabold inline-block border-b-4 border-primary mt-1">Contact Me</h2>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-4">
           <form 
             action="https://formsubmit.co/binupanuransith@gmail.com" 
             method="POST" 
-            className="flex flex-col w-full md:w-1/2 bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:-translate-y-2 transition-all duration-300"
+            className="flex flex-col w-full max-w-xl bg-[#111111] p-8 rounded-xl border border-white/5 shadow-2xl gap-6"
           >
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Enter your name" 
-              className="p-3 bg-transparent border-2 border-gray-700 rounded-md text-white focus:outline-none focus:border-primary transition-colors" 
-              required
-            />
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Enter your email" 
-              className="my-4 p-3 bg-transparent border-2 border-gray-700 rounded-md text-white focus:outline-none focus:border-primary transition-colors" 
-              required
-            />
-            <textarea 
-              name="message" 
-              rows="8" 
-              placeholder="Enter your message" 
-              className="p-3 bg-transparent border-2 border-gray-700 rounded-md text-white focus:outline-none focus:border-primary transition-colors"
-              required
-            ></textarea>
+            <div>
+              <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Your Name</label>
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Enter your name" 
+                className="w-full p-3.5 bg-[#161616] border border-white/5 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors text-sm" 
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Your Email</label>
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                className="w-full p-3.5 bg-[#161616] border border-white/5 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors text-sm" 
+                required
+              />
+            </div>
 
-            <button className="text-black font-bold bg-gradient-to-r from-primary to-cyan-400 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-300 shadow-lg shadow-primary/30">
-              Let's Talk
+            <div>
+              <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Message</label>
+              <textarea 
+                name="message" 
+                rows="6" 
+                placeholder="Enter your message" 
+                className="w-full p-3.5 bg-[#161616] border border-white/5 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors text-sm resize-none"
+                required
+              ></textarea>
+            </div>
+
+            <button className="w-full bg-primary text-black font-extrabold text-sm py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 shadow-lg shadow-primary/20 mt-2 tracking-wide uppercase">
+              Send Message
             </button>
           </form>
-        </div>
-        
-        {/* Terminal Text Decoration */}
-        <div className="hidden md:block mx-auto mt-10 text-xs font-mono text-gray-500">
-            <p>$ echo "Waiting for your message..."</p>
         </div>
 
       </div>
