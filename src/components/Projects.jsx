@@ -27,7 +27,7 @@ const Projects = () => {
   ];
 
   return (
-    <div name="projects" className="w-full bg-[#0a0a0a] text-white py-20 border-t border-white/5">
+    <div name="projects" className="w-full bg-transparent text-white py-20 border-t border-white/5">
       <div className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full">
         
         {/* Header */}

@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <div name="about" className="w-full min-h-screen bg-[#0a0a0a] text-white py-20 flex items-center">
+    <div name="about" className="w-full min-h-screen bg-transparent text-white py-20 flex items-center">
       <div className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full">
         <div className="pb-8">
           <p className="text-sm text-gray-400 tracking-widest uppercase font-mono">// Get to know me</p>

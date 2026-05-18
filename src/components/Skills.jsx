@@ -14,7 +14,7 @@ const Skills = () => {
   ];
 
   return (
-    <div name="skills" className="w-full bg-[#0a0a0a] text-white py-20 border-t border-white/5">
+    <div name="skills" className="w-full bg-transparent text-white py-20 border-t border-white/5">
       <div className="max-w-screen-xl mx-auto p-6 flex flex-col justify-center w-full">
 
         <div className="pb-8">

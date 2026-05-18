@@ -1,20 +1,24 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import HeroImage from "../assets/hero.png";
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const leftY = useTransform(scrollY, [0, 1000], [0, -150]);
+  const rightY = useTransform(scrollY, [0, 1000], [0, 150]);
+
   return (
     <div
       name="home"
-      className="min-h-screen w-full bg-[#0a0a0a] text-white pt-28 pb-12 flex items-center"
+      className="min-h-screen w-full bg-transparent text-white pt-28 pb-12 flex items-center"
     >
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between px-6 gap-12">
 
         {/* --- Left Side: Text Content & Stats --- */}
-        <div className="flex flex-col justify-center w-full lg:w-3/5">
+        <motion.div style={{ y: leftY }} className="flex flex-col justify-center w-full lg:w-3/5">
 
           {/* Intro texts */}
           <motion.p
@@ -125,10 +129,11 @@ const Hero = () => {
             </div>
           </motion.div>
 
-        </div>
+        </motion.div>
 
         {/* --- Right Side: Sophisticated Layered Image Frame --- */}
         <motion.div
+          style={{ y: rightY }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1.5 }}
           transition={{ duration: 0.8, delay: 0.3 }}
