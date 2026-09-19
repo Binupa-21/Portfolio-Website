@@ -19,6 +19,7 @@ const Certifications = () => {
       link: "https://www.credly.com/badges/5daa386a-9410-4688-87c6-ba288a7839d0/linked_in_profile",
       icon: <FaAws size={40} className="text-[#FF9900]" />
     }
+
   ];
 
   return (
