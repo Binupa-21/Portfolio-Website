@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaPython, FaJava, FaGithub, FaAws, FaDocker } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaPython, FaJava, FaGithub, FaAws, FaDocker, FaLinux } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 
 const Skills = () => {
