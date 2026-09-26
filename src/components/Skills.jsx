@@ -11,8 +11,8 @@ const Skills = () => {
     { id: 5, src: <FaCss3Alt size={40} />, title: "CSS", style: "hover:border-blue-400 hover:text-blue-400" },
     { id: 6, src: <FaPython size={40} />, title: "Python", style: "hover:border-yellow-400 hover:text-yellow-400" },
     { id: 7, src: <FaAws size={40} />, title: "AWS", style: "hover:border-[#FF9900] hover:text-[#FF9900]" },
-    { id: 8, src: <FaLinux size={40} />, title: "Linux", style: "hover:border-[#FF9900] hover:text-[#FF9900]" },
-    { id: 9, src: <FaDocker size={40} />, title: "Docker", style: "hover:border-[#FF9900] hover:text-[#FF9900]" },
+    { id: 8, src: <FaLinux size={40} />, title: "Linux", style: "hover:border-white hover:text-white" },
+    { id: 9, src: <FaDocker size={40} />, title: "Docker", style: "hover:border-blue-400 hover:text-blue-400" },
   ];
 
   return (

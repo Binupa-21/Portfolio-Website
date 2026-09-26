@@ -9,7 +9,7 @@ const Projects = () => {
       title: "AquaSense - A Low-Cost, Long-Life IoT Solution for Continuous Water Quality Monitoring",
       desc: "A floating, battery-powered IoT device that provides continuous, real-time data on pH, TDS, and Turbidity to an app on the users phone, eliminating the need for costly lab visits. Designed for water irrigation researchers to detect hazards like algae blooms, non-point source spills, industrial discharge or E-coli hotspots before they become fatal to aquatic life. ",
       tech: ["HTML", "CSS", "JavaScript"],
-      code: "https://github.com/guidance-ss5/Codenet.git",
+      code: "https://github.com/Binupa-21/AquaSense.git",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "LankaBids:  Car Bidding Platform",
       desc: "Co-founded and engineered a real-time, serverless peer-to-peer automotive auction platform. Designed and deployed a secure, transactional bidding engine featuring database-level Row-Level Security (RLS) integrated with custom Clerk JWT claims, real-time WebSocket state-syncing, automatic anti-sniping timer extensions, and a multi-step financial vetting pipeline with encrypted storage. Optimized for performance and SEO via dynamic Open Graph metadata, dynamic sitemaps, and server-side image compilation, delivering a highly responsive, mobile-first web system.",
       tech: ["C++", "SFML", "OOP"],
-      code: "https://github.com/Binupa-21/C-car-game.git",
+      code: "https://github.com/Binupa-21/Bids.git",
     },
     {
       id: 3,

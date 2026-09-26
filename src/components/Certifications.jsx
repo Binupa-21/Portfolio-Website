@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt, FaAws } from "react-icons/fa";
+import { FaExternalLinkAlt, FaAws, FaAnthropic, FaMicrosoft } from "react-icons/fa";
 
 const Certifications = () => {
   const certifications = [
@@ -18,7 +18,35 @@ const Certifications = () => {
       date: "2026",
       link: "https://www.credly.com/badges/5daa386a-9410-4688-87c6-ba288a7839d0/linked_in_profile",
       icon: <FaAws size={40} className="text-[#FF9900]" />
+    },
+
+    {
+      id: 3,
+      title: "AWS Academy Graduate - Cloud Foundations - Training Badge",
+      issuer: "Amazon Web Services",
+      date: "2026 September",
+      link: "https://www.credly.com/badges/5daa386a-9410-4688-87c6-ba288a7839d0/linked_in_profile",
+      icon: <FaAws size={40} className="text-[#FF9900]" />
+    },
+
+    {
+      id: 4,
+      title: "Claude 101",
+      issuer: "Anthropic",
+      date: "2026 June",
+      link: "https://verify.skilljar.com/c/yp5z3qbpgpd8",
+      icon: <FaAnthropic size={40} className="text-[#FF9900]" />
+    },
+
+    {
+      id: 4,
+      title: "AI Skills Fest 2026",
+      issuer: "Microsoft",
+      date: "2026 June",
+      link: "https://www.credly.com/badges/fc1c0f78-6faa-4049-af44-651a6f96be6b/linked_in_profile",
+      icon: <FaMicrosoft size={40} className="text-[#FF9900]" />
     }
+
 
   ];
 
