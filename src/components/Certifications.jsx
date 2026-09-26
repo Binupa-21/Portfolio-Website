@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt, FaAws, FaAnthropic, FaMicrosoft } from "react-icons/fa";
+import { FaExternalLinkAlt, FaAws, FaMicrosoft, FaBrain } from "react-icons/fa";
 
 const Certifications = () => {
   const certifications = [
@@ -35,11 +35,11 @@ const Certifications = () => {
       issuer: "Anthropic",
       date: "2026 June",
       link: "https://verify.skilljar.com/c/yp5z3qbpgpd8",
-      icon: <FaAnthropic size={40} className="text-[#FF9900]" />
+      icon: <FaBrain size={40} className="text-[#FF9900]" />
     },
 
     {
-      id: 4,
+      id: 5,
       title: "AI Skills Fest 2026",
       issuer: "Microsoft",
       date: "2026 June",
