@@ -5,7 +5,7 @@ import { FaGraduationCap, FaFolderOpen, FaBriefcase, FaCalendarAlt } from "react
 const About = () => {
   const stats = [
     { id: 1, title: "Year", val: "2nd", icon: <FaCalendarAlt size={24} className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-1" },
-    { id: 2, title: "Projects", val: "3+ Ongoing", icon: <FaFolderOpen size={24} className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-1" },
+    { id: 2, title: "Projects", val: "3+", icon: <FaFolderOpen size={24} className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-1" },
     { id: 3, title: "Status", val: "Open to Work", icon: <FaBriefcase size={24} className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-1" },
     { id: 4, title: "University of Sri Jayewardenepura", val: "Faculty of Engineering", icon: < img src="https://upload.wikimedia.org/wikipedia/en/1/1f/University_of_Sri_Jayewardenepura_crest.png" alt="Universityof Sri jayewardenepura" height="70" width="70" className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-3" }
   ];
