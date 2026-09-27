@@ -24,7 +24,7 @@ const Certifications = () => {
       id: 3,
       title: "AWS Academy Graduate - Cloud Foundations - Training Badge",
       issuer: "Amazon Web Services",
-      date: "2026 September",
+      date: "September 2026",
       link: "https://www.credly.com/badges/5daa386a-9410-4688-87c6-ba288a7839d0/linked_in_profile",
       icon: <FaAws size={40} className="text-[#FF9900]" />
     },
@@ -33,21 +33,19 @@ const Certifications = () => {
       id: 4,
       title: "Claude 101",
       issuer: "Anthropic",
-      date: "2026 June",
+      date: "June 2026",
       link: "https://verify.skilljar.com/c/yp5z3qbpgpd8",
-      icon: <FaBrain size={40} className="text-[#FF9900]" />
+      icon: <FaBrain size={40} className="text-[#D4C5B9]" />
     },
 
     {
       id: 5,
       title: "AI Skills Fest 2026",
       issuer: "Microsoft",
-      date: "2026 June",
+      date: "June 2026",
       link: "https://www.credly.com/badges/fc1c0f78-6faa-4049-af44-651a6f96be6b/linked_in_profile",
-      icon: <FaMicrosoft size={40} className="text-[#FF9900]" />
+      icon: <FaMicrosoft size={40} className="text-[#00A4EF]" />
     }
-
-
   ];
 
   return (
@@ -63,21 +61,24 @@ const Certifications = () => {
           {certifications.map(({ id, title, issuer, date, link, icon }) => (
             <div
               key={id}
-              className="relative bg-[#111111] rounded-xl p-6 border border-white/5 hover:border-primary/50 transition-all duration-300 flex flex-col group shadow-lg"
+              className="relative bg-gradient-to-br from-[#161616] to-[#0a0a0a] rounded-xl p-6 border border-white/5 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 flex flex-col group overflow-hidden"
             >
-              <div className="flex justify-between items-start mb-6">
-                <div className="bg-[#161616] p-3 rounded-xl border border-white/5 group-hover:border-primary/30 transition-all duration-300">
+              {/* Subtle hover background glow */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="flex justify-between items-start mb-6 relative z-10">
+                <div className="bg-[#1a1a1a] p-3 rounded-xl border border-white/5 group-hover:border-primary/40 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] transition-all duration-300">
                   {icon}
                 </div>
                 <div>
-                  <a href={link} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary transition-colors bg-white/5 p-2 rounded-full inline-flex border border-white/5 hover:bg-white/10">
+                  <a href={link} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary transition-all duration-300 bg-white/5 p-2 rounded-full inline-flex border border-white/5 hover:bg-white/10 hover:scale-110">
                     <FaExternalLinkAlt size={14} />
                   </a>
                 </div>
               </div>
 
-              <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300 text-white leading-snug">{title}</h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow">{issuer}</p>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300 text-white leading-snug relative z-10">{title}</h3>
+              <p className="text-gray-400 text-sm mb-6 flex-grow relative z-10">{issuer}</p>
 
               <div className="mt-auto pt-4 border-t border-white/5 flex justify-between items-center">
                 <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">

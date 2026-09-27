@@ -99,7 +99,7 @@ const Hero = () => {
               Contact Me
             </Link>
             {/* Download CV links to document or projects/contact */}
-            <a href="https://drive.google.com/file/d/1Uy8GZUzuHTKEobWn0Uy3hKAQ3hEkbR_A/view?usp=drive_link"
+            <a href="https://drive.google.com/file/d/1PkrCCtFg8BYIMEgbHYKCB0uhvGeh47a6/view?usp=sharing"
               className="cursor-pointer border border-gray-700 text-white font-medium px-8 py-3 rounded-md hover:border-primary hover:text-primary transition-colors duration-300"
             >
               Download CV
