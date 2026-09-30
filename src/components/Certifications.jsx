@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaAws, FaMicrosoft, FaBrain } from "react-icons/fa";
 
 const Certifications = () => {
@@ -48,18 +49,38 @@ const Certifications = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     <div name="certifications" className="w-full bg-transparent text-white py-20 border-t border-white/5">
-      <div className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full"
+      >
 
-        <div className="pb-8">
+        <motion.div variants={itemVariants} className="pb-8">
           <p className="text-sm text-gray-400 tracking-widest uppercase font-mono">// Continuous learning</p>
           <h2 className="text-4xl font-extrabold inline-block border-b-4 border-primary mt-1">Licenses & Certifications</h2>
-        </div>
+        </motion.div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
           {certifications.map(({ id, title, issuer, date, link, icon }) => (
-            <div
+            <motion.div
+              variants={itemVariants}
               key={id}
               className="relative bg-gradient-to-br from-[#161616] to-[#0a0a0a] rounded-xl p-6 border border-white/5 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-500 flex flex-col group overflow-hidden"
             >
@@ -85,10 +106,10 @@ const Certifications = () => {
                   {date}
                 </span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

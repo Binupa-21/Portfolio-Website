@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
@@ -34,20 +35,41 @@ const Projects = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     <div name="projects" className="w-full bg-transparent text-white py-20 border-t border-white/5">
-      <div className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full"
+      >
 
         {/* Header */}
-        <div className="pb-8">
+        <motion.div variants={itemVariants} className="pb-8">
           <p className="text-sm text-gray-400 tracking-widest uppercase font-mono">// Portfolio</p>
           <h2 className="text-4xl font-extrabold inline-block border-b-4 border-primary mt-1">My Projects</h2>
-        </div>
+        </motion.div>
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
           {projects.map(({ id, title, desc, tech, code, demo }) => (
-            <div
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
               key={id}
               className="bg-[#111111] rounded-xl p-6 border border-white/5 hover:border-primary/50 transition-all duration-300 flex flex-col group shadow-lg"
             >
@@ -81,10 +103,10 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
