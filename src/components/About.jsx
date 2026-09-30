@@ -10,15 +10,34 @@ const About = () => {
     { id: 4, title: "University of Sri Jayewardenepura", val: "Faculty of Engineering", icon: < img src="https://upload.wikimedia.org/wikipedia/en/1/1f/University_of_Sri_Jayewardenepura_crest.png" alt="Universityof Sri jayewardenepura" height="70" width="70" className="mb-3 text-primary" />, colSpan: "col-span-2 md:col-span-3" }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.2 } 
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
     <div name="about" className="w-full min-h-screen bg-transparent text-white py-20 flex items-center">
-      <div className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full">
-        <div className="pb-8">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full"
+      >
+        <motion.div variants={itemVariants} className="pb-8">
           <p className="text-sm text-gray-400 tracking-widest uppercase font-mono">// Get to know me</p>
           <h2 className="text-4xl font-extrabold inline-block border-b-4 border-primary mt-1">About Me</h2>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mt-4">
+        <motion.div variants={itemVariants} className="max-w-3xl mt-4">
           <p className="text-lg text-gray-300 leading-relaxed">
             I am a Computer Engineering undergraduate at the Faculty of Engineering, University of Sri Jayewardenepura, majoring in <span className="text-primary font-bold"> Computer Engineering </span> with a minor in <span className="text-primary font-bold"> High Performance Computing </span>. Passionate about technology, software development, and creative problem-solving, with experience in developing web applications and working on technical projects that combine innovation with practical impact.
           </p>
@@ -30,10 +49,10 @@ const About = () => {
           <p className="text-lg text-gray-300 leading-relaxed mt-4">
             Driven by curiosity and continuous learning, always eager to explore new technologies, take on challenges, and build solutions that create meaningful experiences.
           </p>
-        </div>
+        </motion.div>
 
         {/* Stats / Info Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
           {stats.map(({ id, title, val, icon, colSpan }) => (
             <motion.div
               key={id}
@@ -45,8 +64,8 @@ const About = () => {
               <p className="text-gray-400 text-xs tracking-wide mt-1 uppercase">{title}</p>
             </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

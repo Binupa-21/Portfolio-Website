@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -7,12 +7,25 @@ import HeroImage from "../assets/hero.png";
 
 const Hero = () => {
   const { scrollY } = useScroll();
-  const leftY = useTransform(scrollY, [0, 1000], [0, -150]);
-  const rightY = useTransform(scrollY, [0, 1000], [0, 150]);
+
+  // Add a spring physics wrapper around scrollY for ultra-smooth parallax
+  const springScrollY = useSpring(scrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  // Apply the spring scroll to our transforms
+  const leftY = useTransform(springScrollY, [0, 1000], [0, -150]);
+  const rightY = useTransform(springScrollY, [0, 1000], [0, 150]);
+
+  // Fade out the hero section slightly as user scrolls down for depth
+  const heroOpacity = useTransform(springScrollY, [0, 800], [1, 0.2]);
 
   return (
-    <div
+    <motion.div
       name="home"
+      style={{ opacity: heroOpacity }}
       className="min-h-screen w-full bg-transparent text-white pt-28 pb-12 flex items-center"
     >
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between px-6 gap-12">
@@ -156,7 +169,7 @@ const Hero = () => {
         </motion.div>
 
       </div>
-    </div>
+    </motion.div>
   );
 };
 
